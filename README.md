@@ -33,7 +33,7 @@ If you'd like, I can:
 - prepare a short checklist to harden image handling and multi-room support.
 
 ## Time Spent
-~6–8 hours design + implementation
+~10-12 hours design + implementation
 
 ## Trade-offs
 Stroke replay favored over incremental diffing for determinism.
