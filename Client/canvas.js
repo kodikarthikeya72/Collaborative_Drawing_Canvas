@@ -30,17 +30,32 @@ export class CanvasRenderer {
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
       ctx.lineWidth = stroke.width;
-      ctx.strokeStyle = stroke.color;
+      
+      // For eraser, use a semi-transparent color so it erases smoothly
+      if (stroke.tool === "eraser") {
+        ctx.strokeStyle = "rgba(0,0,0,1)";
+      } else {
+        ctx.strokeStyle = stroke.color;
+      }
 
-      if (pts.length < 2) {
+      if (pts.length < 1) {
         ctx.restore();
         return;
       }
 
-      ctx.beginPath();
-      ctx.moveTo(pts[0].x, pts[0].y);
-      for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i].x, pts[i].y);
-      ctx.stroke();
+      // Draw points with Catmull-Rom spline for smoother curves
+      if (pts.length === 1) {
+        ctx.beginPath();
+        ctx.arc(pts[0].x, pts[0].y, stroke.width / 2, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        ctx.beginPath();
+        ctx.moveTo(pts[0].x, pts[0].y);
+        for (let i = 1; i < pts.length; i++) {
+          ctx.lineTo(pts[i].x, pts[i].y);
+        }
+        ctx.stroke();
+      }
       ctx.restore();
       return;
     }
