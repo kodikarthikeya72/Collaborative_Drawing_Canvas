@@ -1,0 +1,19 @@
+{
+  "name": "collaborative-canvas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "npm install\r node server/server.js",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {}
+}
