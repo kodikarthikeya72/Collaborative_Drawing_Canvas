@@ -4,13 +4,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node Server/server.js"
+    "start": "node Server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "npm install\r node Server/server.js",
+  "description": "npm install\r node server/server.js",
   "dependencies": {
     "express": "^5.2.1",
     "socket.io": "^4.8.3",
