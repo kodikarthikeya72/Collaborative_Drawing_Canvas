@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "npm install\r node server/server.js",
+  "description": "npm install\r node Server/server.js",
   "dependencies": {
     "express": "^5.2.1",
     "socket.io": "^4.8.3",
