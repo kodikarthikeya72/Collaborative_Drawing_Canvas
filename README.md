@@ -2,6 +2,7 @@
 
 ## Run
 npm install
+
 node Server/server.js
 
 ## Test
