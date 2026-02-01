@@ -194,8 +194,8 @@ mainCanvas.addEventListener("pointerdown", e => {
     strokeId: crypto.randomUUID(),
     userId: socket.id,
     tool: currentTool,
-    color: currentTool === "eraser" ? "#000" : currentColor,
-    width: currentTool === "eraser" ? Math.max(currentSize, 16) : currentSize,
+    color: currentTool === "eraser" ? "#FFF" : currentColor,
+    width: currentTool === "eraser" ? currentSize * 3 : currentSize,
     points: [{ x, y, t: performance.now() }],
     active: true
   };
